@@ -366,19 +366,14 @@
 		return
 	var/mob/living/carbon/human/transferer = owner
 
-	to_chat(transfered, "<span class='warning'>You feel a tiny prick!</span>")
+	to_chat(transfered, "<span class='warning'>Чувствую небольшое покалывание!</span>")
 	transferer.reagents.trans_to(transfered, transferer.reagents.total_volume, 1, 1, 0, transfered_by = transferer)
 
 	var/obj/item/bodypart/L = spikey.checkembedded()
 
-	L.embedded_objects -= spikey
 	//this is where it would deal damage, if it transfers chems it removes itself so no damage
 	spikey.forceMove(get_turf(L))
 	transfered.visible_message("<span class='notice'>[spikey] falls out of [transfered]!</span>")
-	if(!transfered.has_embedded_objects())
-		transfered.clear_alert("embeddedobject")
-		SEND_SIGNAL(transfered, COMSIG_CLEAR_MOOD_EVENT, "embedded")
-	spikey.unembedded()
 
 //spider webs
 /datum/mutation/human/webbing

@@ -122,9 +122,9 @@
   return FALSE
 
 /mob/living/carbon/human/proc/check_block()
-	if(roll_stat_dice(current_fate[MOB_DEX] + fate_luck) == 4 && stat == CONSCIOUS)
-		playsound(src, 'code/shitcode/valtos/sounds/block_hand.ogg', 100)
-		return TRUE
+	//if(roll_stat_dice(current_fate[MOB_DEX] + fate_luck) == 4 && stat == CONSCIOUS)
+	//	playsound(src, 'code/shitcode/valtos/sounds/block_hand.ogg', 100)
+	//	return TRUE
 	if(mind)
 		if(mind.martial_art && prob(mind.martial_art.block_chance) && mind.martial_art.can_use(src) && in_throw_mode && !incapacitated(FALSE, TRUE))
 			return TRUE
@@ -673,7 +673,7 @@
 
 		..()
 
-/mob/living/carbon/human/proc/check_self_for_injuries()
+/mob/living/carbon/human/check_self_for_injuries()
 	if(stat == DEAD || stat == UNCONSCIOUS)
 		return
 
@@ -733,8 +733,8 @@
 		message_ready += "<tr><td>\t <b>[r_uppertext(LB.name)]:</b></td><td>[isdisabled] \[<span class='[no_damage ? "notice" : "warning"]'>[r_uppertext(status)]</span>\]</td></tr>"
 
 		for(var/obj/item/I in LB.embedded_objects)
-			if(I.is_embed_harmless())
-				message_ready += "<tr><a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>Похоже [I] прицепился к [LB.name]!</a></tr>"
+			if(I.isEmbedHarmless())
+				to_chat(src, "<tr><a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>Похоже [I] прицепился к [LB.name]!</a></tr>")
 			else
 				message_ready += "<tr><a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>Похоже [I] торчит из моей [LB.name]!</a></tr>"
 
