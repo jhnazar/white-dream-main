@@ -1,59 +1,59 @@
 /datum/blackmarket_item/tool
-	category = "Tools"
+	category = "Инструменты"
 
 /datum/blackmarket_item/tool/caravan_wrench
-	name = "Experimental Wrench"
-	desc = "The extra fast and handy wrench you always wanted!"
+	name = "Экспериментальный гаечный ключ"
+	desc = "Очень быстрый и удобный гаечный ключ, который вы всегда хотели!"
 	item = /obj/item/wrench/caravan
 	stock = 1
 
-	price_min = 400
-	price_max = 800
-	availability_prob = 20
+	price_min = 100
+	price_max = 1000
+	availability_prob = 50
 
 /datum/blackmarket_item/tool/caravan_wirecutters
-	name = "Experimental Wirecutters"
-	desc = "The extra fast and handy wirecutters you always wanted!"
+	name = "Экспериментальные кусачки"
+	desc = "Очень быстрые и удобные кусачки, которые вы всегда хотели!"
 	item = /obj/item/wirecutters/caravan
 	stock = 1
 
-	price_min = 400
-	price_max = 800
-	availability_prob = 20
+	price_min = 100
+	price_max = 1000
+	availability_prob = 50
 
 /datum/blackmarket_item/tool/caravan_screwdriver
-	name = "Experimental Screwdriver"
-	desc = "The extra fast and handy screwdriver you always wanted!"
+	name = "Экспериментальная отвёртка"
+	desc = "Очень быстрая и удобная отвёртка, которую вы всегда хотели!"
 	item = /obj/item/screwdriver/caravan
 	stock = 1
 
-	price_min = 400
-	price_max = 800
-	availability_prob = 20
+	price_min = 100
+	price_max = 1000
+	availability_prob = 50
 
 /datum/blackmarket_item/tool/caravan_crowbar
-	name = "Experimental Crowbar"
-	desc = "The extra fast and handy crowbar you always wanted!"
+	name = "Экспериментальный ломик"
+	desc = "Очень быстрый и удобный ломик, который вы всегда хотели!"
 	item = /obj/item/crowbar/red/caravan
 	stock = 1
 
-	price_min = 400
-	price_max = 800
-	availability_prob = 20
+	price_min = 100
+	price_max = 1000
+	availability_prob = 50
 
 /datum/blackmarket_item/tool/binoculars
-	name = "Binoculars"
-	desc = "Increase your sight by 150% with this handy Tool!"
+	name = "Бинокли"
+	desc = "Повысьте зрение на 150% с помощью этого удобного инструмента!"
 	item = /obj/item/binoculars
-	stock = 1
+	stock = 5
 
-	price_min = 400
-	price_max = 960
-	availability_prob = 30
+	price_min = 100
+	price_max = 1000
+	availability_prob = 70
 
 /datum/blackmarket_item/tool/riot_shield
-	name = "Riot Shield"
-	desc = "Protect yourself from an unexpected Riot at your local Police department!"
+	name = "Щит Спецназа"
+	desc = "Защитите себя от неожиданного бунта в вашем местном отделении полиции!"
 	item = /obj/item/shield/riot
 
 	price_min = 450
@@ -62,8 +62,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/tool/thermite_bottle
-	name = "Thermite Bottle"
-	desc = "30u of Thermite to assist in creating a quick access point or get away!"
+	name = "Колба с термитом"
+	desc = "30 юнитов термита, для созданий дыр"
 	item = /obj/item/reagent_containers/glass/bottle/thermite
 
 	price_min = 500
@@ -72,8 +72,8 @@
 	availability_prob = 30
 
 /datum/blackmarket_item/tool/science_goggles
-	name = "Science Goggles"
-	desc = "These glasses scan the contents of containers and projects their contents to the user in an easy to read format."
+	name = "Научные очки"
+	desc = "Эти очки сканируют содержимое контейнеров и проецируют их содержимое в удобном для чтения формате."
 	item = /obj/item/clothing/glasses/science
 
 	price_min = 150

@@ -1,9 +1,9 @@
 /datum/blackmarket_item/weapon
-	category = "Weapons"
+	category = "Оружия"
 
 /datum/blackmarket_item/weapon/bear_trap
-	name = "Bear Trap"
-	desc = "Get the janitor back at his own game with this affordable prank kit."
+	name = "Медвежий капкан"
+	desc = "Верните уборщика в его собственную игру с помощью этого доступного набора для розыгрышей."
 	item = /obj/item/restraints/legcuffs/beartrap
 
 	price_min = 300
@@ -12,10 +12,10 @@
 	availability_prob = 40
 
 /datum/blackmarket_item/weapon/shotgun_dart
-	name = "Shotgun Dart"
-	desc = "These handy darts can be filled up with any chemical and be shot with a shotgun! \
-	Prank your friends by shooting them with laughter! \
-	Not recommended for comercial use."
+	name = "Дартс для дробовика"
+	desc = "Эти удобные дротики можно заполнить любым химическим веществом и застрелить из дробовика! \
+Разыграй своих друзей, расстреливая их со смеху! \
+Не рекомендуется для коммерческого использования."
 	item = /obj/item/ammo_casing/shotgun/dart
 
 	price_min = 10
@@ -25,8 +25,8 @@
 	availability_prob = 40
 
 /datum/blackmarket_item/weapon/bone_spear
-	name = "Bone Spear"
-	desc = "Authentic tribal spear, made from real bones! A steal at any price, especially if you're a caveman."
+	name = "Костяное копьё"
+	desc = "Подлинное племенное копье, изготовленное из настоящих костей! Крадите любой ценой, особенно если вы пещерный человек."
 	item = /obj/item/spear/bonespear
 
 	price_min = 200
@@ -35,8 +35,8 @@
 	availability_prob = 60
 
 /datum/blackmarket_item/weapon/emp_grenade
-	name = "EMP Grenade"
-	desc = "Use this grenade for SHOCKING results!"
+	name = "EMP граната"
+	desc = "Используйте эту гранату для ШОКИРУЮЩИХ результатов"
 	item = /obj/item/grenade/empgrenade
 
 	price_min = 100
@@ -45,8 +45,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/weapon/reverse_bear_trap
-	name = "Reverse Bear Trap"
-	desc = "A horrifying set of shut metal jaws, rigged to a kitchen timer and secured by padlock to a head-mounted clamp. To apply, hit someone with it."
+	name = "Обратный медвежий капкан"
+	desc = "Ужасающий набор закрытых металлических челюстей, прикрепленных к кухонному таймеру и закрепленных навесным замком к зажиму, установленному на голове. Чтобы нацепить, ударьте кого-то этим."
 	item = /obj/item/reverse_bear_trap
 
 	price_min = 500

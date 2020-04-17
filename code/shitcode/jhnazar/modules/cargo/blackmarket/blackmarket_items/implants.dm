@@ -1,25 +1,9 @@
 /datum/blackmarket_item/implants
-	category = "Implants"
-
-/datum/blackmarket_item/implants/autosurgeon
-	name = "Empty Autosurgeon"
-	desc = "Empty Autosurgeon"
-	item = /obj/item/autosurgeon
-	stock_min = 1
-	stock_max = 5
-
-	price_min = 100
-	price_max = 500
-	availability_prob = 100
-
-	/datum/blackmarket_item/implants/autosurgeon/spawn_item(loc)
-		var/autosurgeon = pick(list(/obj/item/autosurgeon,
-				/obj/item/autosurgeon/syndicate))
-		return new autosurgeon(loc)
+	category = "Импланты"
 
 /datum/blackmarket_item/implants/autosurgeon/thermal_eyes
-	name = "Thermal Eye's"
-	desc = "This autosurgeon contains Thermal Eye's"
+	name = "Имплант термальных глаз"
+	desc = "АвтоХирург с имплантом термальных глаз"
 	item = /obj/item/autosurgeon/syndicate/thermal_eyes
 	stock_min = 1
 	stock_max = 5
@@ -29,8 +13,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/implants/autosurgeon/xray_eyes
-	name = "Xray Eye's"
-	desc = "This autosurgeon contains Xray Eye's"
+	name = "Имплант Х-рей глаз"
+	desc = "Автохирург с имплантом Х-рей глаз"
 	item = /obj/item/autosurgeon/syndicate/xray_eyes
 	stock_min = 1
 	stock_max = 5
@@ -40,8 +24,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/implants/autosurgeon/anti_stun
-	name = "Anti Stun Implant"
-	desc = "This autosurgeon contains Anti Stun Implant"
+	name = "Имплант анти оглушения"
+	desc = "АвтоХирург с имплантом от оглушения"
 	item = /obj/item/autosurgeon/syndicate/anti_stun
 	stock_min = 1
 	stock_max = 5
@@ -51,8 +35,8 @@
 	availability_prob = 70
 
 /datum/blackmarket_item/implants/autosurgeon/reviver
-	name = "Reviver Implant"
-	desc = "This autosurgeon contains Reviver Implant"
+	name = "Имплант возрождения"
+	desc = "АвтоХирург с имплантом возрождения"
 	item = /obj/item/autosurgeon/syndicate/reviver
 	stock_min = 1
 	stock_max = 5
@@ -62,8 +46,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/implants/autosurgeon/breathing_tube
-	name = "Breathing Tube Implant"
-	desc = "This autosurgeon contains Breathing Tube Implant"
+	name = "Имплант дыхательной трубки"
+	desc = "АвтоХирург с имплантом дыхательной трубки"
 	item = /obj/item/autosurgeon/breathing_tube
 	stock_min = 1
 	stock_max = 5
@@ -73,8 +57,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/implants/autosurgeon/hud/medical
-	name = "Medical HUD implant"
-	desc = "This autosurgeon contains Medical HUD implant"
+	name = "Имплант Медицинского ХУДа"
+	desc = "АвтоХирург с имплантом медицинского ХУДа"
 	item = /obj/item/autosurgeon/hud/medical
 	stock_min = 1
 	stock_max = 5
@@ -84,8 +68,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/implants/autosurgeon/hud/security
-	name = "Security HUD implant"
-	desc = "This autosurgeon contains Security HUD implant"
+	name = "Имплант ХУДа Службы Безопасности"
+	desc = "АвтоХирург с имплантом ХУДа Службы Безопасности"
 	item = /obj/item/autosurgeon/hud/security
 	stock_min = 1
 	stock_max = 5
@@ -95,8 +79,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/implants/autosurgeon/hud/diagnostic
-	name = "Diagnostic HUD implant"
-	desc = "This autosurgeon contains Diagnostic HUD implant"
+	name = "Имплант с Диагностическим ХУДом"
+	desc = "АвтоХирург с диагностическим ХУДом"
 	item = /obj/item/autosurgeon/hud/diagnostic
 	stock_min = 1
 	stock_max = 5
@@ -106,8 +90,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/implants/autosurgeon/nutriment
-	name = "Nutriment pump implant"
-	desc = "This autosurgeon contains Nutriment pump implant"
+	name = "Имплант питательной трубки"
+	desc = "АвтоХирург с питательной трубкой"
 	item = /obj/item/autosurgeon/nutriment
 	stock_min = 1
 	stock_max = 5
@@ -117,8 +101,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/implants/autosurgeon/nutriment/plus
-	name = "Nutriment pump implant PLUS"
-	desc = "This autosurgeon contains Nutriment pump implant PLUS"
+	name = "Имплант питательной трубки ПЛЮС"
+	desc = "АвтоХирург с имплантом питательной трубки ПЛЮС"
 	item = /obj/item/autosurgeon/nutriment/plus
 	stock_min = 1
 	stock_max = 5
@@ -139,8 +123,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/implants/autosurgeon/toolset
-	name = "Engineering Toolset Implant"
-	desc = "This autosurgeon contains Toolset Implant"
+	name = "Имплант набора инструментов"
+	desc = "АвтоХирург с имплантом набора инструментов"
 	item = /obj/item/autosurgeon/arm/toolset
 	stock_min = 1
 	stock_max = 5
@@ -150,8 +134,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/implants/autosurgeon/medibeam
-	name = "Medibeam Implant"
-	desc = "This autosurgeon contains Medibeam Implant"
+	name = "Имплант с медицинским лучом"
+	desc = "АвтоХирург с медицинским лучом"
 	item = /obj/item/autosurgeon/arm/medibeam
 	stock_min = 1
 	stock_max = 5
@@ -161,8 +145,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/implants/autosurgeon/surgery
-	name = "Surgery Toolset Implant"
-	desc = "This autosurgeon contains Surgery Toolset Implant"
+	name = "Имплант набора инструментов для хирургии"
+	desc = "АвтоХирург с имплантом инструментов для хирургии"
 	item = /obj/item/autosurgeon/arm/surgery
 	stock_min = 1
 	stock_max = 5

@@ -55,7 +55,7 @@ export const BlackmarketUplink = props => {
     <Fragment>
       {shipmentSelector}
       <Section
-        title="Black Market Uplink"
+        title="Аплинк Чёрного Рынка"
         buttons={(
           <Box inline bold>
             <AnimatedNumber value={Math.round(data.money)} /> cr

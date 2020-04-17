@@ -11,7 +11,7 @@
 
 /obj/machinery/ltsrbt
 	name = "Long-To-Short-Range-Bluespace-Transciever"
-	desc = "The LTSRBT is a compact teleportation machine for recieving and sending items outside the station and inside the station.\nUsing teleportation frequencies stolen from NT it is near undetectable.\nEssential for any illegal market operations on NT stations.\n"
+	desc = "LTSRBT - это компактная телепортационная машина для получения и отправки предметов за пределы станции и внутри станции. Используя частоты телепортации, украденные у NT, это почти невозможно обнаружить. Особенно для любых незаконных рыночных операций на станциях NT."
 	icon_state = "exonet_node"
 	circuit = /obj/item/circuitboard/machine/ltsrbt
 	density = TRUE
@@ -27,7 +27,7 @@
 	/// Current recharge progress.
 	var/recharge_cooldown = 0
 	/// Base recharge time which is used to get recharge_time.
-	var/base_recharge_time = 100
+	var/base_recharge_time = 50
 	/// Current /datum/blackmarket_purchase being recieved.
 	var/recieving
 	/// Current /datum/blackmarket_purchase being sent to the target uplink.

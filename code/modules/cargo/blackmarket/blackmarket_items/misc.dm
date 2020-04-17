@@ -1,9 +1,9 @@
 /datum/blackmarket_item/misc
-	category = "Miscellaneous"
+	category = "Прочее"
 
 /datum/blackmarket_item/misc/cap_gun
-	name = "Cap Gun"
-	desc = "Prank your friends with this harmless gun! Harmlessness guranteed."
+	name = "Игрушечный пистолет"
+	desc = "Пранк оружие"
 	item = /obj/item/toy/gun
 
 	price_min = 50
@@ -12,8 +12,8 @@
 	availability_prob = 80
 
 /datum/blackmarket_item/misc/shoulder_holster
-	name = "Shoulder holster"
-	desc = "Yeehaw, hardboiled friends! This holster is the first step in your dream of becoming a detective and being allowed to shoot real guns!"
+	name = "Кобура"
+	desc = "Эта кобура - первый шаг в вашей мечте стать детективом и иметь возможность стрелять из настоящего оружия!"
 	item = /obj/item/storage/belt/holster
 
 	price_min = 400
@@ -22,8 +22,8 @@
 	availability_prob = 60
 
 /datum/blackmarket_item/misc/holywater
-	name = "Flask of holy water"
-	desc = "Father Lootius' own brand of ready-made holy water."
+	name = "Колба со святой водой"
+	desc = "Собственная марка отца Лотия готовой святой воды."
 	item = /obj/item/reagent_containers/food/drinks/bottle/holywater
 
 	price_min = 400
@@ -37,19 +37,19 @@
 	return ..()
 
 /datum/blackmarket_item/misc/strange_seed
-	name = "Strange Seeds"
-	desc = "An Exotic Variety of seed that can contain anything from glow to acid."
+	name = "Странные семена"
+	desc = "Экзотическое разнообразие семян, которое может содержать что угодно, от свечения до кислоты."
 	item = /obj/item/seeds/random
 
-	price_min = 320
-	price_max = 360
-	stock_min = 2
-	stock_max = 5
+	price_min = 500
+	price_max = 1000
+	stock_min = 1
+	stock_max = 30
 	availability_prob = 50
 
 /datum/blackmarket_item/misc/smugglers_satchel
-	name = "Smuggler's Satchel"
-	desc = "This easily hidden satchel can become a versatile tool to anybody with the desire to keep certain items out of sight and out of mind."
+	name = "ранец Контрабандистра"
+	desc = "Этот легко спрятанный ранец может стать универсальным инструментом для любого, кто хочет держать определенные предметы вне поля зрения."
 	item = /obj/item/storage/backpack/satchel/flat/empty
 
 	price_min = 750

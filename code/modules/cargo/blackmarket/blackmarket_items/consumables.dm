@@ -1,5 +1,5 @@
 /datum/blackmarket_item/consumable
-	category = "Consumables"
+	category = "Расхожники"
 
 /datum/blackmarket_item/consumable/clown_tears
 	name = "Bowl of Clown's Tears"
@@ -12,8 +12,8 @@
 	availability_prob = 10
 
 /datum/blackmarket_item/consumable/donk_pocket_box
-	name = "Box of Donk Pockets"
-	desc = "A well packaged box containing the favourite snack of every spacefarer."
+	name = "Коробка Донк-Покетов"
+	desc = "Хорошо упакованная коробка в которой находится любимая закуска любого космонавтика"
 	item = /obj/item/storage/box/donkpockets
 
 	stock_min = 1
@@ -21,7 +21,7 @@
 	price_min = 100
 	price_max = 500
 	availability_prob = 100
-	
+
 	/datum/blackmarket_item/consumable/donk_pocket_box/spawn_item(loc)
 		var/donkpockets = pick(list(/obj/item/storage/box/donkpockets,
 				/obj/item/storage/box/donkpockets/donkpocketspicy,
@@ -33,8 +33,8 @@
 		return new donkpockets(loc)
 
 /datum/blackmarket_item/consumable/suspicious_pills
-	name = "Bottle of Suspicious Pills"
-	desc = "A random cocktail of luxury drugs that are sure to put a smile on your face!"
+	name = "Банка подозрительных пилюль"
+	desc = "Набор с разными таблетками в банках"
 	item = /obj/item/storage/pill_bottle
 
 	stock_min = 1
@@ -62,8 +62,8 @@
 	return new pillbottle(loc)
 
 /datum/blackmarket_item/consumable/floor_pill
-	name = "Strange Pill"
-	desc = "The Russian Roulette of the Maintenance Tunnels."
+	name = "Странная таблетка"
+	desc = "Русская рулетка технических туннелей"
 	item = /obj/item/reagent_containers/pill/floorpill
 
 	stock_min = 1
@@ -73,8 +73,8 @@
 	availability_prob = 100
 
 /datum/blackmarket_item/consumable/pumpup
-	name = "Maintenance Pump-Up"
-	desc = "Resist any Baton stun with this handy device!"
+	name = "Технический адреналин"
+	desc = "Этим можно сопротивлятся от дубинок"
 	item = /obj/item/reagent_containers/hypospray/medipen/pumpup
 
 	stock_max = 3
