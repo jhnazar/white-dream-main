@@ -9,8 +9,8 @@
 	availability_prob = 50
 
 /datum/blackmarket_item/clothing/xeno
-	name = "Collectable Xeno hat"
-	desc = "A"
+	name = "Коллекционный шлем Ксеноморфа"
+	desc = "Hiss hiss hiss!"
 	item = /obj/item/clothing/head/collectable/xenom
 
 	price_min = 100
