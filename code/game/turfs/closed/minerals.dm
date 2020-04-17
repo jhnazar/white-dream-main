@@ -200,10 +200,10 @@
 		/obj/item/stack/ore/silver = 50, /obj/item/stack/ore/plasma = 50, /obj/item/stack/ore/bluespace_crystal)
 
 /turf/closed/mineral/random/high_chance/snow
-	name = "snowy mountainside"
+	name = "заснеженный склон горы"
 	icon = 'icons/turf/mining.dmi'
-	smooth_icon = 'icons/turf/walls/mountain_wall.dmi'
-	icon_state = "mountainrock"
+	smooth_icon = 'icons/turf/walls/rock_wall.dmi'
+	icon_state = "rock2"
 	smooth = SMOOTH_MORE|SMOOTH_BORDER
 	canSmoothWith = list (/turf/closed)
 	defer_change = TRUE
@@ -238,10 +238,10 @@
 		/turf/closed/mineral/gibtonite/volcanic = 4, /turf/open/floor/plating/asteroid/airless/cave/volcanic = 1, /obj/item/stack/ore/bluespace_crystal = 1)
 
 /turf/closed/mineral/random/snow
-	name = "snowy mountainside"
+	name = "заснеженный склон горы"
 	icon = 'icons/turf/mining.dmi'
-	smooth_icon = 'icons/turf/walls/mountain_wall.dmi'
-	icon_state = "mountainrock"
+	smooth_icon = 'icons/turf/walls/icerock_wall.dmi'
+	icon_state = "rock2"
 	smooth = SMOOTH_MORE|SMOOTH_BORDER
 	canSmoothWith = list (/turf/closed)
 	defer_change = TRUE
@@ -255,6 +255,33 @@
 		/turf/closed/mineral/uranium/ice/icemoon = 5, /turf/closed/mineral/diamond/ice/icemoon = 1, /turf/closed/mineral/gold/ice/icemoon = 10, /turf/closed/mineral/titanium/ice/icemoon = 11,
 		/turf/closed/mineral/silver/ice/icemoon = 12, /turf/closed/mineral/plasma/ice/icemoon = 20, /turf/closed/mineral/iron/ice/icemoon = 40,
 		/turf/closed/mineral/gibtonite/ice/icemoon = 4, /turf/open/floor/plating/asteroid/airless/cave/snow = 1, /turf/closed/mineral/bscrystal/ice/icemoon = 1)
+
+/turf/closed/mineral/random/snow/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/shovel))
+		var/turf/T = user.loc
+		if (!isturf(T))
+			return
+
+		var/turf/TA = above()
+		if(istype(TA, /turf/closed/wall) || istype(TA, /turf/open/floor/plasteel))
+			to_chat(user, "<span class='notice'>Наверху что-то очень твёрдое!</span>")
+			return
+
+		if(last_act + (40 * I.toolspeed) > world.time)
+			return
+		last_act = world.time
+		to_chat(user, "<span class='notice'>Начинаю выкапывать лестницу наверх...</span>")
+
+		var/dir_to_dig = get_dir(user.loc, src)
+
+		if(I.use_tool(src, user, 40, volume=50))
+			if(ismineralturf(src))
+				to_chat(user, "<span class='notice'>Выкапываю лестницу наверх.</span>")
+				gets_drilled(user, TRUE)
+				TA.ChangeTurf(/turf/open/openspace, flags = CHANGETURF_INHERIT_AIR)
+				var/obj/L = new /obj/structure/stairs(src)
+				L.dir = dir_to_dig
+	. = ..()
 
 /turf/closed/mineral/random/snow/no_caves
 	mineralSpawnChanceList = list(
@@ -289,10 +316,10 @@
 
 // Subtypes for mappers placing ores manually.
 /turf/closed/mineral/random/labormineral/ice
-	name = "snowy mountainside"
+	name = "заснеженный склон горы"
 	icon = 'icons/turf/mining.dmi'
-	smooth_icon = 'icons/turf/walls/mountain_wall.dmi'
-	icon_state = "mountainrock"
+	smooth_icon = 'icons/turf/walls/rock_wall.dmi'
+	icon_state = "rock2"
 	smooth = SMOOTH_MORE|SMOOTH_BORDER
 	canSmoothWith = list (/turf/closed)
 	defer_change = TRUE
@@ -566,8 +593,8 @@
 /turf/closed/mineral/snowmountain
 	name = "заснеженный склон горы"
 	icon = 'icons/turf/mining.dmi'
-	smooth_icon = 'icons/turf/walls/mountain_wall.dmi'
-	icon_state = "mountainrock"
+	smooth_icon = 'icons/turf/walls/rock_wall.dmi'
+	icon_state = "rock2"
 	smooth = SMOOTH_MORE|SMOOTH_BORDER
 	canSmoothWith = list (/turf/closed)
 	baseturfs = /turf/open/floor/plating/asteroid/snow

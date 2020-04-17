@@ -149,37 +149,24 @@ obj/item/gun/ballistic/rifle/boltaction/wzzzz/kar98k/scope/attackby(obj/item/A, 
 
 /obj/item/gun/ballistic/rifle/boltaction/wzzzz/kar98k/scope/update_icon(var/add_scope = FALSE)
 	if (bolt_locked == FALSE)
+		icon_state = "kar98k_scope_open"
+		item_state = "kar98k_scope_open"
 		icon = 'code/shitcode/Wzzzz/icons/Weea.dmi'
+		slot_flags = ITEM_SLOT_BACK
 		lefthand_file = 'code/shitcode/Wzzzz/icons/clothing/mob/lefthand_guns.dmi'
 		righthand_file = 'code/shitcode/Wzzzz/icons/clothing/mob/righthand_guns.dmi'
 		mob_overlay_icon = 'code/shitcode/Wzzzz/icons/clothing/mob1/back.dmi'
-		if(!findtext(icon_state, "_open"))
-			icon = 'code/shitcode/Wzzzz/icons/Weea.dmi'
-			lefthand_file = 'code/shitcode/Wzzzz/icons/clothing/mob/lefthand_guns.dmi'
-			righthand_file = 'code/shitcode/Wzzzz/icons/clothing/mob/righthand_guns.dmi'
-			mob_overlay_icon = 'code/shitcode/Wzzzz/icons/clothing/mob1/back.dmi'
-			icon_state = "kar98k_scope_open"
-			item_state = "kar98k_scope_open"
-			slot_flags = ITEM_SLOT_BACK
-	else if(icon_state == "kar98k_scope_open") //closed
-		icon_state = "kar98k_scope"
-		icon = 'code/shitcode/Wzzzz/icons/Weea.dmi'
-		lefthand_file = 'code/shitcode/Wzzzz/icons/clothing/mob/lefthand_guns.dmi'
-		righthand_file = 'code/shitcode/Wzzzz/icons/clothing/mob/righthand_guns.dmi'
-		mob_overlay_icon = 'code/shitcode/Wzzzz/icons/clothing/mob1/back.dmi'
-	else if(icon_state == "kar98k_scope")
-		icon = 'code/shitcode/Wzzzz/icons/Weea.dmi'
-		lefthand_file = 'code/shitcode/Wzzzz/icons/clothing/mob/lefthand_guns.dmi'
-		righthand_file = 'code/shitcode/Wzzzz/icons/clothing/mob/righthand_guns.dmi'
-		mob_overlay_icon = 'code/shitcode/Wzzzz/icons/clothing/mob1/back.dmi'
+		fire_sound = 'code/shitcode/Wzzzz/kar_shot.ogg'
 		return
 	else
 		icon_state = "kar98k_scope"
 		item_state = "kar98k_scope"
-		fire_sound = 'code/shitcode/Wzzzz/kar_shot.ogg'
+		icon = 'code/shitcode/Wzzzz/icons/Weea.dmi'
 		lefthand_file = 'code/shitcode/Wzzzz/icons/clothing/mob/lefthand_guns.dmi'
 		righthand_file = 'code/shitcode/Wzzzz/icons/clothing/mob/righthand_guns.dmi'
 		mob_overlay_icon = 'code/shitcode/Wzzzz/icons/clothing/mob1/back.dmi'
+		fire_sound = 'code/shitcode/Wzzzz/kar_shot.ogg'
+		return
 
 obj/item/gun/ballistic/rifle/boltaction/wzzzz/kar98k/scope/rack(mob/user = null)
 	if (bolt_locked == FALSE)
@@ -240,3 +227,17 @@ obj/item/gun/ballistic/rifle/boltaction/wzzzz/kar98k/scope/rack(mob/user = null)
 	righthand_file = 'code/shitcode/Wzzzz/icons/clothing/mob/righthand_guns.dmi'
 	mag_type = /obj/item/ammo_box/magazine/wt550m9/wzzzz/mc9mmt
 	actions_types = list(/datum/action/item_action/toggle_firemode)
+
+/obj/item/nullrod/claymore/vanya
+	name = "eldritch sword"
+	desc = "Looks like life of this weapon is located in tentacle, what gets out from broken crystal."
+	icon = 'code/shitcode/Wzzzz/Knife.dmi'
+	lefthand_file = 'code/shitcode/Wzzzz/Knifel.dmi'
+	righthand_file = 'code/shitcode/Wzzzz/Knifer.dmi'
+	icon_state = "old_sword"
+	item_state = "old_sword"
+	chaplain_spawnable = 0
+	force = 23
+	sharpness = 2
+	resistance_flags = LAVA_PROOF|FIRE_PROOF|ACID_PROOF|INDESTRUCTIBLE|FREEZE_PROOF
+	block_chance = 25

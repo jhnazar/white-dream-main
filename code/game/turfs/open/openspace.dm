@@ -53,10 +53,13 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 /turf/open/openspace/update_multiz(prune_on_fail = FALSE, init = FALSE)
 	. = ..()
 	var/turf/T = below()
-	if(!T)
+	if(!T || istype(T, /turf/closed/wall))
 		vis_contents.len = 0
-		if(prune_on_fail)
-			ChangeTurf(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
+		ChangeTurf(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
+		return FALSE
+	if(istype(T, /turf/closed))
+		vis_contents.len = 0
+		ChangeTurf(/turf/open/floor/plating/asteroid/snow/icemoon/caves, flags = CHANGETURF_INHERIT_AIR)
 		return FALSE
 	if(init)
 		vis_contents += T
@@ -159,10 +162,8 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	return FALSE
 
 /turf/open/openspace/icemoon
-	name = "ice chasm"
+	name = "открытое пространство"
 	baseturfs = /turf/open/openspace/icemoon
-	can_cover_up = FALSE
-	can_build_on = FALSE
 	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
 
 /turf/open/openspace/icemoon/can_zFall(atom/movable/A, levels = 1, turf/target)
